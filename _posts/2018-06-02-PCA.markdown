@@ -17,7 +17,7 @@ Lets take any point from above diagram and call it as the \\( x_i \\) and projec
 so we have to increase the variance of \\( F_1'^T.x_i \\) for all values if i. and Var(\\( F_1'^T.x_i \\)) = \\( \frac{1}{n} \sum_{i=0}^n ({F_1'^T.x_i - F_1'^T.\bar x_i})^2\\). if data is standadized then \\( \bar x_i \\) = 0 so second term in variance  = 0 .
 \\( \sigma ^2 \\) = \\( \frac{1}{n} \sum_{i=0}^n ({F_1'^T.x_i})^2\\). so our opimization problem is have to find F1' that maximizes variance such that \\( F_1' \\)  is unit vector. so optmization is Max  \\( \frac{1}{n} \sum_{i=0}^n ({F_1'^T.x_i})^2\\)  s.t  \\(F_1'^T.F_1\\) = 1. and covariance matrix S = \\( \frac{1}{n} \sum_{i=1}^n x_i.x_i^T = \frac{X^T.X}{n} \\) so we can change the above variance as \\( F_1'^TSF_1\\).We can solve this by Constrained optimization using lagrange multiplier and after changing to lagrange form
   
-\\[L(\\( F_1',\lambda \\)) =  \\( F_1'^TSF_1\\) -  \\( \lambda(F_1'^TF_1 - 1)\\)\\]  
+\\[L(F_1',\lambda ) =  F_1'^TSF_1 - \lambda(F_1'^TF_1 - 1)\\]  
 \\[ \frac{\partial L}{\partial F_1'}= SF_1' - \lambda F_1' \\]
   
   
