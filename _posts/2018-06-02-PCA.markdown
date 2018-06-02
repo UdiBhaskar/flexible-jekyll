@@ -28,5 +28,6 @@ and covariance matrix S = \\( \frac{1}{n} \sum_{i=1}^n x_i.x_i^T = \frac{X^T.X}{
 \\[ \frac{\partial L}{\partial F_1'}= SF_1' - \lambda F_1' = 0 \\]  
 \\[ SF_1'  = \lambda F_1'\\]  
 This is the definition of [eigan vector](https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors) where \\(F_1'\\) is eigan vector and \\(\lambda\\) is eigan value of S i.e covariance matrix of \\(x_i\\)'s.  
-Selecting the no of dimentions n such that maxumum variance is caputed , this is one of main things while performing PCA to the data. from the eigan values and vectors we got \\(\lambda_1,'lambda_2...\lambda_d\\) and corresponding vectors\\(F_1',F_2'...,F_d'\\)
+Selecting the no of dimentions such that maxumum variance captured is one of main things while performing PCA to the data. from the eigan values and vectors we got \\(\lambda_1,\lambda_2...\lambda_d\\) and corresponding vectors\\(F_1',F_2'...,F_d'\\). from this variance ratio of n dimensons is given by   
+\\[ Variance ratio = \frac{\lambda_1+\Lanbda_2+..+\lambda_d}{\sum_{i=1}^d(\lambda_i)}\\]
   
