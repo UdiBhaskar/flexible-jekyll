@@ -29,5 +29,10 @@ and covariance matrix S = \\( \frac{1}{n} \sum_{i=1}^n x_i.x_i^T = \frac{X^T.X}{
 \\[ SF_1'  = \lambda F_1'\\]  
 This is the definition of [eigan vector](https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors) where \\(F_1'\\) is eigan vector and \\(\lambda\\) is eigan value of S i.e covariance matrix of \\(x_i\\)'s.  
 Selecting the no of dimentions such that maxumum variance captured is one of main things while performing PCA to the data. from the eigan values and vectors we got \\(\lambda_1,\lambda_2...\lambda_d\\) and corresponding vectors\\(F_1',F_2'...,F_d'\\). from this variance ratio of n dimensons is given by   
-\\[ Variance ratio = \frac{\lambda_1+\Lanbda_2+..+\lambda_d}{\sum_{i=1}^d(\lambda_i)}\\]
+\\[ Variance_ratio = \frac{\lambda_1+\lambda_2+..+\lambda_d}{\sum_{i=1}^d(\lambda_i)}\\]
+variance ratio is in between 0 and 1 so we need to select n such that variance ratio is maximum or beased on ow much variace we need in our data.
+![MNIST data PCA]({{site.baseurl}}/assets/img/mnist_pca.png)
+Above is the Gramph for cumulative variance ratio vs no of dimentions. from that we can observe that incresing the dimentions is increasing the variance ratio as well and around 500 dimensions is giving nearly 1 as ratio. We can also use PCA for data visualization in lower dimentions. 
+
+
   
