@@ -10,7 +10,7 @@ site-twitter: #if your site has a twitter account, enter it here
 
 # Author Settings
 author: Uday Bhaskar # add your name
-author-img: #david-freeman.jpg # add your photo
+author-img: https://avatars1.githubusercontent.com/u/23260749?s=400&u=cff548b078ec97714bf27d6166893712e5ccc343&v=4 # add your photo
 about-author: #I am a web developer focusing on front-end development. Always hungry to keep learning. # add description
 social-twitter: # add your Twitter handle
 social-facebook: # add your Facebook handle
