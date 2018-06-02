@@ -9,6 +9,5 @@ tags: [PCA,Principal component]
 The goal of PCA is to find new set of dimensions that better captures the varibility of data. i.e. the first dimention is chosen to capture as much of varibility as posiible, second dimension is orthogonal to first and captures as much of remaining varibility as possible and so on.  
 
 Lets assume we have two dimension data i.e (n x 2) matrix and if we want only one dimension,then i will only keep the data which is having more spread/varinace so my final data will be (n x 1) matrix wich contains column which having more spread. but in some cases as below fig(a)  we have spread on F1 and F2 both are high and if we drop any one dimention then we may loose data by very much in that case. we can also see that in F1' direction we have maximum spread and perpendicular to this is F2', so instaed of dropping F1 or F2, if we find F1' and F2' then we will get more spread in F1' direction than F2'. after that we can drop F2' and project points onto F1'. This is nothing but a rotation of axis F1 to some angle. so our aim is we want to find direction of F1' such that variance of points projects onto F1' is maximum.  
-
-
+![PCA 2 dim data]({{site.baseurl}}/assets/img/ginal_pca.png)
 
