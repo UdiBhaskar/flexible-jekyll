@@ -13,7 +13,7 @@ Lets assume we have two dimension data i.e (n x 2) matrix and if we want only on
 ![PCA 2 dim data]({{site.baseurl}}/assets/img/ginal_pca.png)   
 
 #### Finding F1':
-Lets take any point from above diagram and 
+Lets take any point from above diagram and call it s $x_i$
 
 
 
