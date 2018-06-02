@@ -15,7 +15,7 @@ Lets assume we have two dimension data i.e (n x 2) matrix and if we want only on
 #### Finding F1':
 Lets take any point from above diagram and call it as the \\( x_i \\) and projection onto F1' is \\( x_i' \\) = \\( \frac{F1'.x_i}{||F1'||^2} \\). and we need only direction of F1' so F1' is taken as unit vector and ||F1'|| = 1. i.e \\( x_i' \\) = \\( F1'^T.x_i \\).  
 so we have to increase the variance of \\( F1'^T.x_i \\) for all values if i.  
-Var(\\( F1'^T.x_i \\)) = \\( 1/n \sum_{i=0}^n {F1'^T.x_i - F1'^T.\bar x_i}^2\\)  
+Var(\\( F1'^T.x_i \\)) = \\( \frac{1}{n} \sum_{i=0}^n ({F1'^T.x_i - F1'^T.\bar x_i})^2\\)  
 
 
 
