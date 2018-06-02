@@ -27,6 +27,6 @@ and covariance matrix S = \\( \frac{1}{n} \sum_{i=1}^n x_i.x_i^T = \frac{X^T.X}{
 \\[L(F_1',\lambda ) =  F_1'^TSF_1 - \lambda(F_1'^TF_1 - 1)\\]  
 \\[ \frac{\partial L}{\partial F_1'}= SF_1' - \lambda F_1' = 0 \\]  
 \\[ SF_1'  = \lambda F_1'\\]  
-This is the definition of [eigan vector](https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors) where \\(F_1'\\) is eigan vector and \\(\lambda\\) is eigan value of S i.e covariance matrix of \\(x_i\\)'s
-  
+This is the definition of [eigan vector](https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors) where \\(F_1'\\) is eigan vector and \\(\lambda\\) is eigan value of S i.e covariance matrix of \\(x_i\\)'s.  
+Selecting the no of dimentions n such that maxumum variance is caputed , this is one of main things while performing PCA to the data. from the eigan values and vectors we got \\(\lambda_1,'lambda_2...\lambda_d\\) and corresponding vectors\\(F_1',F_2'...,F_d'\\)
   
