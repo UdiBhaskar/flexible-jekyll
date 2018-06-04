@@ -25,4 +25,14 @@ from operations that preserve Argmax, if g(x) is monotonic function then argmax 
 For regularization 
 \\[L2 - W^* =  argmin \sum_{i=1}^n \log(1+e^{-y_iW^Tx_i}) + \lambda ||W|| \\]  
 \\[L1 - W^* =  argmin \sum_{i=1}^n \log(1+e^{-y_iW^Tx_i}) + \lambda |W| \\] 
+after optimization we can predict by using \\(W^Tx+b\\)
+#### Feature importance and Model interpretability:  
+if all features are almost independent then our Weight vetors W will give the how much is the effect of feature according to the feature weight. so if absolute value of feature weight is large then the feature is more important to predict the class. so for this all features must be independent so before getting feature importance have to check for independance i.e multicollinearity.   
+We can check multicollinearity by using perturbation test. for this testing add some value \\(\delta\\) to the data and agian recompute the weights lets name it as \\(W_p\\). campre W and \\(W_p\\)  if any high changes in \\(W_p\\) then weight vector is not good choice to interpret the feature importance.
+#### Time and Space complexity:  
+n = no of data instances, d = dimension of data
+Train time complexity is nearly O(nd)  
+Rum time complexity is nearly O(d) because we have calculate only \\(W^Tx_q\\)  
+Run time space complexity is O(d) because need to save only weight vector  
+We can decrease the no of multiplication while prediction time by incresing the l1 regularization, because l1 regularization will increse the sparsity of Weight vector.   
 
