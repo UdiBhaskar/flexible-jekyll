@@ -20,6 +20,6 @@ From above diagram  for \\(\pi_1\\), \\( \sum_{i=1}^n (y_iW_1^Tx_i)\\) = 1+1+1+1
 so our optimization problem is \\[ W^* = argmax \sum_{i=1}^n \sigma(y_iW^Tx_i)\\]  
 from operations that preserve Argmax, if g(x) is monotonic function then argmax f(x) = argmax g(f(x)). if we take g(x) as a log fuction then we can get some good properties as converting exponent as mutiplication, converting multiplication into addition. so our final optimization problem is \\[W^* = argmax \sum_{i=1}^n \log(\sigma(y_iW^Tx_i)) \\]
 \\[W^* = argmax \sum_{i=1}^n \log(\frac{1}{1+e^{-y_iW^Tx_i}}) \\]  
-\\[W^* = - argmax \sum_{i=1}^n \log(1+e^(-y_iW^Tx_i)) \\]  
+\\[W^* = - argmax \sum_{i=1}^n \log(1+e^{-y_iW^Tx_i}) \\]  
 \\[W^* =  argmin \sum_{i=1}^n \log(1+e^(-y_iW^Tx_i)) \\]    
 
