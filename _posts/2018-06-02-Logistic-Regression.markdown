@@ -16,5 +16,6 @@ But this will fails in some conditions one of them is listed below.
 ![Logistic regression error case]({{site.baseurl}}/assets/img/lr_error_case.jpg)    
 From above diagram  for \\(\pi_1\\), \\( \sum_{i=1}^n (y_iW_1^Tx_i)\\) = 1+1+1+1+1+1+1+1-50 = -42 and for \\(\pi_2\\), \\( \sum_{i=1}^n (y_iW_2^Tx_i)\\) = 1+2+3+4-1-2-3-4+1 = 1. so plane \\(\pi_2\\) is better for maximizing the sum but we can see that accuracy of \\(\pi_1\\) is higher than \\(\pi_2\\). it is because of single outlier in our train data. we can overcome this by squeezing the maximum distance points into min distance. this can be done by sigmoid function as shown below.  
 ![Sigmaoid]({{site.baseurl}}/assets/img/sigmoid.jpg)  
-[sigmoid function](https://en.wikipedia.org/wiki/Sigmoid_function) wil give values between [0,1] based on input real value.  
-so optimization problem is \\[ W^* = argmax \sum_{i=1}^n \sigma(y_iW^Tx_i)\\]  
+[sigmoid function](https://en.wikipedia.org/wiki/Sigmoid_function) wil give values between [0,1] based on input real value. so we can decrese the outlier effect on the optimization problem.
+so our optimization problem is \\[ W^* = argmax \sum_{i=1}^n \sigma(y_iW^Tx_i)\\]  
+from operations that preserve Argmax, if g(x) is monotonic function then argmax f(x) = argmax g(f(x)). if we take g(x) as a log fuction then we can get some good properties as converting exponent as mutiplication, converting multiplication into addition. so our final optimization problem is \\[W^* = argmax \sum_{i=1}^n \log(\sigma(y_iW^Tx_i)) \\]
