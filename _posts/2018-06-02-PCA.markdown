@@ -9,12 +9,12 @@ tags: [PCA,Principal component]
 ## PCA :
 The goal of PCA is to find new set of dimensions that better captures the varibility of data. i.e. the first dimention is chosen to capture as much of varibility as posiible, second dimension is orthogonal to first and captures as much of remaining varibility as possible and so on.  
 
-Lets assume we have two dimension data i.e (n x 2) matrix and if we want only one dimension,then i will only keep the data which is having more spread/varinace so my final data will be (n x 1) matrix wich contains column which having more spread. but in some cases as below fig(a)  we have spread on F1 and F2 both are high and if we drop any one dimention then we may loose data by very much in that case. we can also see that in F1' direction we have maximum spread and perpendicular to this is F2' (fig(b)), so instaed of dropping F1 or F2, if we find F1' and F2' then we will get more spread in F1' direction than F2'. after that we can drop F2' and project points onto F1'. This is nothing but a rotation of axis F1 to some angle. so our aim is we want to find direction of F1' such that variance of points projects onto F1' is maximum.  
+Lets assume we have two dimension data i.e (n x 2) matrix and if we want only one dimension,then i will only keep the data which is having more spread/varinace so my final data will be (n x 1) matrix which contains column which having more spread. but in some cases as below fig(a)  we have spread on F1 and F2 both are high and if we drop any one dimention then we may loose data by very much. in that case, we can also see that in F1' direction we have maximum spread and perpendicular to this is F2' (fig(b)), so instaed of dropping F1 or F2, if we find F1' and F2' then we will get more spread in F1' direction than F2'. after that we can drop F2' and project points onto F1'. This is nothing but a rotation of axis F1 to some angle. so our aim is we want to find direction of F1' such that variance of points projects onto F1' is maximum.  
 ![PCA 2 dim data]({{site.baseurl}}/assets/img/ginal_pca.png)   
 #### Finding F1':
 Lets take any point from above diagram and call it as the \\( x_i \\) and projection onto F1' is  
 \\[ x_i' = \frac{F_1'.x_i}{||F_1'||^2} \\].  
-we need only direction of F1' so F1' is taken as unit vector and ||\\( ||F_1'||^2\\)||= 1. i.e \\( x_i' \\) = \\( F_1'^T.x_i \\).  
+we need only direction of F1' so F1' is taken as unit vector and \\( ||F_1'||^2\\)= 1. i.e \\( x_i' \\) = \\( F_1'^T.x_i \\).  
 so we have to increase the variance of \\( F_1'^T.x_i \\) for all values if i.  
 \\[Var( F_1'^T.x_i ) = \frac{1}{n} \sum_{i=0}^n ({F_1'^T.x_i - F_1'^T.\bar x_i})^2\\].  
 if data is standadized then \\( \bar x_i \\) = 0 so second term in variance  = 0  so  
@@ -23,7 +23,7 @@ so our opimization problem is have to find F1' that maximizes variance such that
   \\[ Max \frac{1}{n} \sum_{i=0}^n ({F_1'^T.x_i})^2  s.t  F_1'^T.F_1 = 1.\\]  
 and covariance matrix S = \\( \frac{1}{n} \sum_{i=1}^n x_i.x_i^T = \frac{X^T.X}{n} \\) so we can change the above variance as \\( F_1'^TSF_1\\).We can solve this by Constrained optimization using lagrange multiplier and after changing to lagrange form
   
-\\[L(F_1',\lambda ) =  F_1'^TSF_1 - \lambda(F_1'^TF_1 - 1)\\]  
+\\[L(F_1',\lambda ) =  F_1'^TSF_1' - \lambda(F_1'^TF_1' - 1)\\]  
 \\[ \frac{\partial L}{\partial F_1'}= SF_1' - \lambda F_1' = 0 \\]   
 \\[ SF_1'  = \lambda F_1'\\]  
 This is the definition of [eigan vector](https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors) where \\(F_1'\\) is eigan vector and \\(\lambda\\) is eigan value of S i.e covariance matrix of \\(x_i\\)'s.  
