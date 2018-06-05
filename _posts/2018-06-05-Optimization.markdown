@@ -18,10 +18,8 @@ In an unconstrained optimization problem, the task is to locate the solution x* 
 ![maximum and Minimum]({{site.baseurl}}/assets/img/max_min.jpg)  
 eg: \\[f(x) = x^3 − 3x^2 − 45x \\]
 \\[f'(x) = 3^2 - 6x - 45 = 0 \\]
-\\[x^* = -3 \text{ or } x^* = 5\\]  
+\\[x^* = -3 \text{ or } x^* = 5\\]
 \\[f''(x) = 6x − 6\\]  
 When x = -3, f ''(-3) = -24 and this means a MAXIMUM point.  
 When x = 5, f ''(x) = 24 and this means a MINIMUM pont.   
-
-
-
+This definition can be extended to a multivariate function\\(f(x_1,x_2...x_n)\\),where the condition for finding a stationary point is \\[\frac{\partial f}{\partial x_i} = 0 \text{ for all } x_1,x_2..x_n\\]
