@@ -33,5 +33,5 @@ solution for above equation is \\(x^* = y^* = 0 \text{ and } x^* = 1/27, y^* = 1
 Hessain of f is 
 \begin{bmatrix}
     x_{11} & x_{12}  \\  
-     x_{11} & x_{12}
+     x_{11} & x_{13}
  \end{bmatrix}
