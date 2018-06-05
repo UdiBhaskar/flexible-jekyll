@@ -32,6 +32,6 @@ eg: \\[f(x,y) = 3x^2+2y^3-2xy\\]
 solution for above equation is \\(x^* = y^* = 0 \text{ and } x^* = 1/27, y^* = 1/9\\)  
 Hessain of f is 
 \begin{bmatrix}
-    x_{11} & x_{12} \\
+    x_{11} & x_{12}  \\  
      x_{11} & x_{12}
  \end{bmatrix}
