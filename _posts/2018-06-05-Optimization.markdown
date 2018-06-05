@@ -14,5 +14,13 @@ In an unconstrained optimization problem, the task is to locate the solution x* 
 1. Find the f'(x) and set it to zero and then find x = x*  
 2. if f''(x) > 0  then x* is local minimum   
 3. if f''(x) < 0  then x* is local maximum    
-4. If f''(x) = 0 then x* is critical point of f(x)
+4. If f''(x) = 0 then x* is inflection point of f(x) as shown in below fig  
+![maximum and Minimum]({{site.baseurl}}/assets/img/max_min.jpg)  
+eg: \\[[f(x) = x^3 − 3x^2 − 45x \\]
+\\[f'(x) = 3^2 - 6x - 45 = 0 \\]
+\\[x* = -3 or x* = 5\\]  
+\\[f''(x) = 6x − 6\\]  
+When x = -3, f ''(-3) = -24 and this means a MAXIMUM point.  
+When x = 5, f ''(x) = 24 and this means a MINIMUM pont.  
+
 
