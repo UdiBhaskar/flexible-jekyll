@@ -31,7 +31,4 @@ eg: \\[f(x,y) = 3x^2+2y^3-2xy\\]
 \\[\frac{\partial f}{\partial x} = 6x-2y = 0 \text{ and } \frac{\partial f}{\partial y} = 6y^2-2x = 0\\]
 solution for above equation is \\(x^* = y^* = 0 \text{ and } x^* = 1/27, y^* = 1/9\\)  
 Hessain of f is 
-\begin{bmatrix}
-    x_{11} & x_{12}  \\  
-     x_{11} & x_{13}
- \end{bmatrix}
+\begin{matrix} a & b \\ c & d \end{matrix}
