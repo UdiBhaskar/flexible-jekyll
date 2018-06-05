@@ -23,4 +23,6 @@ eg: \\[f(x) = x^3 − 3x^2 − 45x \\]
 When x = -3, f ''(-3) = -24 and this means a MAXIMUM point.  
 When x = 5, f ''(x) = 24 and this means a MINIMUM pont.   
 This definition can be extended to a multivariate function\\(f(x_1,x_2...x_n)\\),where the condition for finding a stationary point is \\[\frac{\partial f}{\partial x_i} = 0 \text{ for all } x_1,x_2..x_n\\]
-unlike univariate functions, it is more difficult to determine whether X* corresponds to a maximum or minimum stationary point.The difficulty arises because we need to consider the partial derivatives \\(\frac{\partial^2 f}{\partial x_i \partial x_j}\\) for a;; possible pairs of i,j. so this complete set is given by [hessian matrix](https://en.wikipedia.org/wiki/Hessian_matrix).
+unlike univariate functions, it is more difficult to determine whether X* corresponds to a maximum or minimum stationary point.The difficulty arises because we need to consider the partial derivatives \\(\frac{\partial^2 f}{\partial x_i \partial x_j}\\) for all possible pairs of i,j. so this complete set is given by [hessian matrix](https://en.wikipedia.org/wiki/Hessian_matrix) H(x).  
+1. X is minimum when H(x) is [positive definite](https://en.wikipedia.org/wiki/Positive-definite_matrix) i.e \\(X^THX >0\\)  every non-zero column vector X.
+2. 
