@@ -16,7 +16,7 @@ In an unconstrained optimization problem, the task is to locate the solution x* 
 3. if f''(x) < 0  then x* is local maximum    
 4. If f''(x) = 0 then x* is inflection point of f(x) as shown in below fig  
 ![maximum and Minimum]({{site.baseurl}}/assets/img/max_min.jpg)  
-eg: \\[[f(x) = x^3 − 3x^2 − 45x \\]
+eg: \\[f(x) = x^3 − 3x^2 − 45x \\]
 \\[f'(x) = 3^2 - 6x - 45 = 0 \\]
 \\[x^8 = -3 or x^* = 5\\]  
 \\[f''(x) = 6x − 6\\]  
