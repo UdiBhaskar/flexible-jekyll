@@ -34,5 +34,7 @@ variance ratio is in between 0 and 1 so we need to select n such that variance r
 ![MNIST data PCA]({{site.baseurl}}/assets/img/mnist_pca.png)  
 Above is the Gramph for cumulative variance ratio vs no of dimentions. from that we can observe that incresing the dimentions is increasing the variance ratio as well and around 500 dimensions is giving nearly 1 as ratio. We can also use PCA for data visualization in lower dimentions.  
 
+References:
+1. applied ai course
 
   
