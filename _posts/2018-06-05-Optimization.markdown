@@ -15,6 +15,7 @@ In an unconstrained optimization problem, the task is to locate the solution x* 
 2. if f''(x) > 0  then x* is local minimum   
 3. if f''(x) < 0  then x* is local maximum    
 4. If f''(x) = 0 then x* is inflection point of f(x) as shown in below fig  
+
 ![maximum and Minimum]({{site.baseurl}}/assets/img/max_min.jpg)  
 eg: \\[f(x) = x^3 − 3x^2 − 45x \\]
 \\[f'(x) = 3^2 - 6x - 45 = 0 \\]
@@ -27,9 +28,9 @@ unlike univariate functions, it is more difficult to determine whether X* corres
 1. X is minimum if H(x) is [positive definite](https://en.wikipedia.org/wiki/Positive-definite_matrix) i.e \\(X^THX > 0\\) for any non-zero column vector X.
 2. X is maximum if H(x) is negative definite i.e \\(X^THX < 0\\) for every non zero column vector X.
 3. X is saddle point if H(x) is indefinite i.e for some values of X \\(X^THX > 0\\) and for some values \\(X^THX < 0\\)  
+
 eg: \\[f(x,y) = 3x^2+2y^3-2xy\\]
 \\[\frac{\partial f}{\partial x} = 6x-2y = 0 \text{ and } \frac{\partial f}{\partial y} = 6y^2-2x = 0\\]
 solution for above equation is \\(x^* = y^* = 0 \text{ and } x^* = 1/27, y^* = 1/9\\)  
 Hessain of f is 
-\[\begin{matrix} a & b \\ c & d \end{matrix}\] 
 
