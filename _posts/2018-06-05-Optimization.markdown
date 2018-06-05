@@ -24,5 +24,15 @@ When x = -3, f ''(-3) = -24 and this means a MAXIMUM point.
 When x = 5, f ''(x) = 24 and this means a MINIMUM pont.   
 This definition can be extended to a multivariate function\\(f(x_1,x_2...x_n)\\),where the condition for finding a stationary point is \\[\frac{\partial f}{\partial x_i} = 0 \text{ for all } x_1,x_2..x_n\\]
 unlike univariate functions, it is more difficult to determine whether X* corresponds to a maximum or minimum stationary point.The difficulty arises because we need to consider the partial derivatives \\(\frac{\partial^2 f}{\partial x_i \partial x_j}\\) for all possible pairs of i,j. so this complete set is given by [hessian matrix](https://en.wikipedia.org/wiki/Hessian_matrix) H(x).  
-1. X is minimum when H(x) is [positive definite](https://en.wikipedia.org/wiki/Positive-definite_matrix) i.e \\(X^THX >0\\)  every non-zero column vector X.
-2. 
+1. X is minimum if H(x) is [positive definite](https://en.wikipedia.org/wiki/Positive-definite_matrix) i.e \\(X^THX > 0\\) for any non-zero column vector X.
+2. X is maximum if H(x) is negative definite i.e \\(X^THX < 0\\) for every non zero column vector X.
+3. X is saddle point if H(x) is indefinite i.e for some values of X \\(X^THX > 0\\) and for some values \\(X^THX < 0\\)  
+eg: \\[f(x,y) = 3x^2+2y^3-2xy\\]
+\\[\frac{\partial f}{\partial x} = 6x-2y = 0 \text{ and } \frac{\partial f}{\partial y} = 6y^2-2x = 0\\]
+solution for above equation is \\(x^* = y^* = 0 \text{ and } x^* = 1/27, y^* = 1/9\\)  
+Hessain of f is \\[\begin{bmatrix}
+    x_{11} & x_{12} & x_{13} & \dots  & x_{1n} \\
+    x_{21} & x_{22} & x_{23} & \dots  & x_{2n} \\
+    \vdots & \vdots & \vdots & \ddots & \vdots \\
+    x_{d1} & x_{d2} & x_{d3} & \dots  & x_{dn}
+\end{bmatrix}\\]
