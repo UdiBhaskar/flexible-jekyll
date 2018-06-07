@@ -44,7 +44,7 @@ In this method, the location of x is updated in the direction of the steepest de
 ##### Newton's Method:  
 Newton's method is based on quadratic approximation to the function. By using a Taylor series expansion of f around \\(x_0\\) is
 \\[ f(x) \approx f(x_0)+(x-x_0)f'(x_0)+\frac{(x-x_0)^2}{2}f''(x_0)\\]
-\\[ f'(x) = f'(x_0)+(x=x_0)f''(x_0) = 0\\]
+\\[ f'(x) = f'(x_0)+(x-x_0)f''(x_0) = 0\\]
 \\[ x = x_0 - \frac{f'(x_0)}{f''(x_0)}\\]
 above equation can be used to update r until it converges to the location of the minimum value.  
 For multivariate functions the above equaton is \\[x = x_0 - H^{-1}\nabla(f)\\]  
