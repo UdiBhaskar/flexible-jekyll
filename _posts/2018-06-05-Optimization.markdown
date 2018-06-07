@@ -32,5 +32,5 @@ unlike univariate functions, it is more difficult to determine whether X* corres
 eg: \\[f(x,y) = 3x^2+2y^3-2xy\\]
 \\[\frac{\partial f}{\partial x} = 6x-2y = 0 \text{ and } \frac{\partial f}{\partial y} = 6y^2-2x = 0\\]
 solution for above equation is \\(x^* = y^* = 0 \text{ and } x^* = 1/27, y^* = 1/9\\)  
-Hessain of f is \\[\begin{bmatrix}1 & a\\2 & b\\\end{bmatrix}\\]
+Hessain of f is \begin{bmatrix}1 & a\\2 & b\\\end{bmatrix}
 
