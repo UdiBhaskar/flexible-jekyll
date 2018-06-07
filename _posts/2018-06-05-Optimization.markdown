@@ -48,7 +48,7 @@ Newton's method is based on quadratic approximation to the function. By using a 
 \\[ x = x_0 - \frac{f'(x_0)}{f''(x_0)}\\]
 above equation can be used to update r until it converges to the location of the minimum value.  
 For multivariate functions the above equaton is \\[x = x_0 - \frac{H^{-1}}{\nabla(f)}\\]  
-#### constrained Optimization:  
+#### Constrained Optimization:  
 constrained optimization is the process of optimizing an objective function with respect to some variables in the presence of constraints on those variables. Constraints can be either hard constraints, which set conditions for the variables that are required to be satisfied, or soft constraints, which have some variable values that are penalized in the objective function if, and based on the extent that, the conditions on the variables are not satisfied.  
 a general constrained minimization problem may be written as follows 
 \\[ \text{Min} f(x) \text{ subject to }g_i(x) = c_i\text{ for i = 1,2,..n }h_j(x)\ge d_j \text{ for j = 1,2,..n }\\]
@@ -67,6 +67,25 @@ eg: Minimize the f(x,y) = x + 2y subjected to constrint \\(x^2+y^2-4=0\\).
 \\[\frac{\partial L}{\partial y} = 2+2\lambda y = 0\\]
 \\[\frac{\partial L}{\partial \lambda} = x^2+y^2-4 = 0\\]
 solving these eqations gives \\(\lambda = \pm 5/4, x = \mp2/\sqrt{5}, y = \mp 4/\sqrt{5} \\) so \\(f(-2/\sqrt{5},-4/\sqrt{5}) = -10/sqrt{5},(f(2/\sqrt{5},4/\sqrt{5}) = 10/sqrt{5}\\). so f(x,y) has minimum value at \\(x = -2/\sqrt{5},y = -4/\sqrt{5}\\).  
+##### Inequality Constraints:
+consider a a problem of finding the minimum value of \\(f(x_1,x_2,x_3..x_n)\\) subjected to equality constraints of form \\(h_i(x) \le 0\\) for 1 = 1,2,3...d.  
+The method for solving this problem is quite similar to the Lagrange method described above. However, the inequality constraints impose additional conditions to the optimization problem. Lagrangian is \\(L(x,\lambda) = f(x) + \sum_{i=0}^d \lambda_ih_i(x)\\) and constraints known as KKT conditions
+\\[\frac{\partial L}{\partial x_i} = 0 \text{ for i = 1,2,..n }\\]
+\\[h_i(x) \le 0 , \text{ for i = 1,2,3,..d }\\]
+\\[\lambda_i \ge 0 , \text{ for i = 1,2,3,..d }\\]
+\\[\lambda_ih_i(x) = 0 , \text{ for i = 1,2,3,..d }\\]  
+Notice that the Lagrange multipliers are no longer unbounded in the presence of inequality constraints.  
+Eg: Minimize \\(f(x,y) = (x-1)^2 + (y-3)^2\\) subjected to x+y<=2 and y>=x.  
+Lagrangian is \\[ L(x,y,\lambda_1,lambda_2) = (x-1)^2 + (y-3)^2 + \lambda_1(x+y-2) + \lambda_2(x-y)\\]
+and KKT conditions are \\[\frac{\partial L}{\partial x} = 2(x-1)+\lambda_1+\lambda_2 = 0\\]
+\\[\frac{\partial L}{\partial y} = 2(y-3)+\lambda_1-\lambda_2 = 0\\]
+\\[\lambda_1(x+y-2) = 0\\]
+\\[\lambda_2(x-y) = 0\\]
+\\[\lambda_1 \ge 0 , \lambda_2 \ge 0 , x+y \le 2, y \ge x\\]
+So we have to solve above equations to get te solution for min values.
+
+
+
 
 
 
