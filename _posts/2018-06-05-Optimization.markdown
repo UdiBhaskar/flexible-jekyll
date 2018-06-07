@@ -84,6 +84,12 @@ and KKT conditions are \\[\frac{\partial L}{\partial x} = 2(x-1)+\lambda_1+\lamb
 \\[\lambda_1 \ge 0 , \lambda_2 \ge 0 , x+y \le 2, y \ge x\\]
 So we have to solve above equations to get te solution for min values.
 
+References:
+1.Picture of Maxima and minima and example taken from http://bestmaths.net/online/index.php/year-levels/year-12/year-12-topic-list/stationary-and-turning-points/
+2.Applied AI Course
+3.Introduction to data mining by Tan
+
+
 
 
 
