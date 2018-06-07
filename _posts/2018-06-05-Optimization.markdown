@@ -41,9 +41,12 @@ For \\(x^* = 1/27, y^* = 1/9 \text{ value of }X^TH(1/27,1/9)X = 4x^2-2xy+4y^2/3 
 Gradient descent is a first-order iterative optimization algorithm for finding the minimum of a function.The gradient descent method assumes that the function f(x) is differentiable and computes the stationary point as follows
 \\[x_0 = x_0 - \lambda \nabla(f)\\]
 In this method, the location of x is updated in the direction of the steepest descent, which means that x is moved towards the decreasing value of f(x).
-~~~~~~~~
+algorithm:  
 1. initilize x to \\(x_0\\)
-~~~~~~~~
+2. while converge:
+      x = \\(x_0 - \lambda \nabla(f) \\)
+      (\\x_0\\) = x
+   end while
 ##### Newton's Method:  
 Newton's method is based on quadratic approximation to the function. By using a Taylor series expansion of f around \\(x_0\\) is
 \\[ f(x) \approx f(x_0)+(x-x_0)f'(x_0)+\frac{(x-x_0)^2}{2}f''(x_0)\\]
