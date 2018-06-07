@@ -51,7 +51,7 @@ For multivariate functions the above equaton is \\[x = x_0 - \frac{H^{-1}}{\nabl
 #### constrained Optimization:  
 constrained optimization is the process of optimizing an objective function with respect to some variables in the presence of constraints on those variables. Constraints can be either hard constraints, which set conditions for the variables that are required to be satisfied, or soft constraints, which have some variable values that are penalized in the objective function if, and based on the extent that, the conditions on the variables are not satisfied.  
 a general constrained minimization problem may be written as follows 
-[\\ Min f(x) \text{ subject to } \newline g_i(x) = c_i \text{for i = 1,2,..n } \newline h_j(x) \ge d_j \text{for j = 1,2,..n }\\]
+[\\ Min f(x) \text{ subject to } g_i(x) = c_i \text{for i = 1,2,..n } h_j(x) \ge d_j \text{for j = 1,2,..n }\\]
 
 
 
