@@ -60,6 +60,7 @@ By using Lagrange multipliers above problem can be solved and steps are given be
 \\[\frac{\partial L}{\partial x_i} = 0 \text{ for i = 1,2,..n }\\]
 \\[\frac{\partial L}{\partial \lambda_i} = 0 \text{ for i =1,2..d }\\]
 3. solve above eqations in step2 to obtain \\(x^* \text{ and corresponding } \lambda_i's\\)  
+
 test gallnnlsgnlsng
 
 
