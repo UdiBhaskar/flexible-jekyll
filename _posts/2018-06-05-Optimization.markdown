@@ -58,6 +58,6 @@ By using Lagrange multipliers above problem can be solved and steps are given be
 1. define the Lagrangian, \\(L(x,\lambda) = f(x) + \sum_{i=0}^d \lambda_ig_i(x)\\) where \\(\lambda_i\\) is called Lagrange multiplier.
 2. compute \\(\frac{\partial L}{\partial x_i} \text{ for i = 1,2,..n and } \frac{\partial L}{\partial \lambda_i} \text{ for i =1,2..d }\\) and set it to zero.
 \\[\frac{\partial L}{\partial x_i} = 0 \text{ for i = 1,2,..n }\\]
-\\[\frac{\partial L}{\partial \lambda_i} = 0 \text{ for i =1,2..d }
+\\[\frac{\partial L}{\partial \lambda_i} = 0 \text{ for i =1,2..d }\\]
 
 
