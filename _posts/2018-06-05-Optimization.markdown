@@ -51,7 +51,13 @@ For multivariate functions the above equaton is \\[x = x_0 - \frac{H^{-1}}{\nabl
 #### constrained Optimization:  
 constrained optimization is the process of optimizing an objective function with respect to some variables in the presence of constraints on those variables. Constraints can be either hard constraints, which set conditions for the variables that are required to be satisfied, or soft constraints, which have some variable values that are penalized in the objective function if, and based on the extent that, the conditions on the variables are not satisfied.  
 a general constrained minimization problem may be written as follows 
-\\[ \text{Min} f(x) \text{ subject to }g_i(x) = c_i\text{for i = 1,2,..n }h_j(x)\ge d_j \text{for j = 1,2,..n }\\]
-
+\\[ \text{Min} f(x) \text{ subject to }g_i(x) = c_i\text{ for i = 1,2,..n }h_j(x)\ge d_j \text{ for j = 1,2,..n }\\]
+##### Equality Constraints:  
+consider a a problem of finding the minimum value of \\(f(x_1,x_2,x_3..x_n)\\) subjected to equality constraints of form \\(g_i(x) = 0\\) for 1 = 1,2,3...d.  
+By using Lagrange multipliers above problem can be solved and steps are given below.  
+1. define the Lagrangian, \\(L(x,\lambda) = f(x) + \sum_{i=0}^d \lambda_ig_i(x)\\) where \\(\lambda_i\\) is called Lagrange multiplier.
+2. compute \\(\frac{\partial L}{\partial x_i} \text{ for i = 1,2,..n and } \frac{\partial L}{\partial \lambda_i} \text{ for i =1,2..d }\\) and set it to zero.
+\\[\frac{\partial L}{\partial x_i} = 0 \text{ for i = 1,2,..n }\\]
+\\[\frac{\partial L}{\partial \lambda_i} = 0 \text{ for i =1,2..d }
 
 
