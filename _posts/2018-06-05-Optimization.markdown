@@ -61,7 +61,7 @@ By using Lagrange multipliers above problem can be solved and steps are given be
 \\[\frac{\partial L}{\partial \lambda_i} = 0 \text{ for i =1,2..d }\\]
 3. solve above eqations in step2 to obtain \\(x^* \\) and corresponding  \\(\lambda_i's\\)  
 
-eg: Minimize the f(x,y) = x + 2y subjected to constrint \\(x^2+y^2-4=0).  
+eg: Minimize the f(x,y) = x + 2y subjected to constrint \\(x^2+y^2-4=0\\).  
 \\[L(x,y,\lambda) = x+2y+\lambda(x^2+y^2-4)\\]
 \\[\frac{\partial L}{\partial x} = 1+2\lambda x = 0\\]
 \\[\frac{\partial L}{\partial y} = 2+2\lambda y = 0\\]
