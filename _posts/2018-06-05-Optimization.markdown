@@ -40,19 +40,18 @@ For \\(x^* = 1/27, y^* = 1/9 \text{ value of }X^TH(1/27,1/9)X = 4x^2-2xy+4y^2/3 
 ##### Gradient Descent Method:  
 Gradient descent is a first-order iterative optimization algorithm for finding the minimum of a function.The gradient descent method assumes that the function f(x) is differentiable and computes the stationary point as follows
 \\[x_0 = x_0 - \lambda \nabla(f)\\]
-In this method, the location of x is updated in the direction of the steepest descent, which means that x is moved towards the decreasing value of f(x).
-algorithm:  
-1. initilize x to \\(x_0\\)
-2. while converge:
-      x = \\(x_0 - \lambda \nabla(f) \\)
-      (\\x_0\\) = x
-   end while
+In this method, the location of x is updated in the direction of the steepest descent, which means that x is moved towards the decreasing value of f(x).  
 ##### Newton's Method:  
 Newton's method is based on quadratic approximation to the function. By using a Taylor series expansion of f around \\(x_0\\) is
 \\[ f(x) \approx f(x_0)+(x-x_0)f'(x_0)+\frac{(x-x_0)^2}{2}f''(x_0)\\]
 \\[ f'(x) = f'(x_0)+(x=x_0)f''(x_0) = 0\\]
 \\[ x = x_0 - \frac{f'(x_0)}{f''(x_0)}\\]
 above equation can be used to update r until it converges to the location of the minimum value.  
-For multivariate functions the above equaton is \\[x = x_0 - \frac{H^{-1}}{\nabla(f)}\\]
+For multivariate functions the above equaton is \\[x = x_0 - \frac{H^{-1}}{\nabla(f)}\\]  
+#### constrained Optimization:  
+constrained optimization is the process of optimizing an objective function with respect to some variables in the presence of constraints on those variables. Constraints can be either hard constraints, which set conditions for the variables that are required to be satisfied, or soft constraints, which have some variable values that are penalized in the objective function if, and based on the extent that, the conditions on the variables are not satisfied.  
+a general constrained minimization problem may be written as follows 
+[\\ Min f(x) \text{ subject to } \newline g_i(x) = c_i \text{for i = 1,2,..n } \newline h_j(x) \ge d_j \text{for j = 1,2,..n }\\]
+
 
 
