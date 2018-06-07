@@ -66,6 +66,8 @@ eg: Minimize the f(x,y) = x + 2y subjected to constrint \\(x^2+y^2-4=0\\).
 \\[\frac{\partial L}{\partial x} = 1+2\lambda x = 0\\]
 \\[\frac{\partial L}{\partial y} = 2+2\lambda y = 0\\]
 \\[\frac{\partial L}{\partial \lambda} = x^2+y^2-4 = 0\\]
-solving these eqations gives \\(\lambda = \pm 5/4, x = \mp2/\sqrt{5}, y = \mp 4/\sqrt{5} \\) so \\(f(-2/\sqrt{5},-4/\sqrt{5}) = -10/sqrt{5},(f(2/\sqrt{5},4/\sqrt{5}) = 10/sqrt{5}\\). so f(x,y) has minimum value at \\(-2/\sqrt{5},-4/\sqrt{5}\\).
+solving these eqations gives \\(\lambda = \pm 5/4, x = \mp2/\sqrt{5}, y = \mp 4/\sqrt{5} \\) so \\(f(-2/\sqrt{5},-4/\sqrt{5}) = -10/sqrt{5},(f(2/\sqrt{5},4/\sqrt{5}) = 10/sqrt{5}\\). so f(x,y) has minimum value at \\(x = -2/\sqrt{5},y = -4/\sqrt{5}\\).  
+
+
 
 
