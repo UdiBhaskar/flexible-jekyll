@@ -34,5 +34,5 @@ eg: \\[f(x,y) = 3x^2+2y^3-2xy\\]
 solution for above equation is \\(x^* = y^* = 0 \text{ and } x^* = 1/27, y^* = 1/9\\)  
 Hessain of f is\\[ H(x,y) =   \begin{bmatrix} 6 & -2 \newline -2 & 12y  \end{bmatrix} \\]
 for \\(x^* = y^* = 0 \text{ value of }X^TH(0,0)X = 6x^2-4xy\\) and this can be either positive or negative so at (0,0) Hessian is indefinite so (0,0) is saddle point.  
-for \\(x^* = 1/27, y^* = 1/9 \text{ value of }X^TH(1/27,1/9)X = 4x^2-2xy+4/3y^2\\)
+for \\(x^* = 1/27, y^* = 1/9 \text{ value of }X^TH(1/27,1/9)X = 4x^2-2xy+4y^2/3\\)
 
