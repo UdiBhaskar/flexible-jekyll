@@ -47,7 +47,7 @@ Newton's method is based on quadratic approximation to the function. By using a 
 \\[ f'(x) = f'(x_0)+(x=x_0)f''(x_0) = 0\\]
 \\[ x = x_0 - \frac{f'(x_0)}{f''(x_0)}\\]
 above equation can be used to update r until it converges to the location of the minimum value.  
-For multivariate functions the above equaton is \\[x = x_0 - \frac{H^{-1}}{\nabla(f)}\\]  
+For multivariate functions the above equaton is \\[x = x_0 - H^{-1}\nabla(f)\\]  
 #### Constrained Optimization:  
 constrained optimization is the process of optimizing an objective function with respect to some variables in the presence of constraints on those variables. Constraints can be either hard constraints, which set conditions for the variables that are required to be satisfied, or soft constraints, which have some variable values that are penalized in the objective function if, and based on the extent that, the conditions on the variables are not satisfied.  
 a general constrained minimization problem may be written as follows 
