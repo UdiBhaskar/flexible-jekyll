@@ -36,3 +36,6 @@ Rum time complexity is nearly O(d) because we have calculate only \\(W^Tx_q\\)
 Run time space complexity is O(d) because need to save only weight vector  
 We can decrease the no of multiplication while prediction time by incresing the l1 regularization, because l1 regularization will increse the sparsity of Weight vector.     
 
+References:
+1. Applied AI Course
+2. https://en.wikipedia.org/wiki/Logistic_regression
