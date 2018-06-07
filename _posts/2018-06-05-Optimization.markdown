@@ -37,9 +37,19 @@ solution for above equation is \\(x^* = y^* = 0 \text{ and } x^* = 1/27, y^* = 1
 Hessain of f is\\[ H(x,y) =   \begin{bmatrix} 6 & -2 \newline -2 & 12y  \end{bmatrix} \\]
 For \\(x^* = y^* = 0 \text{ value of }X^TH(0,0)X = 6x^2-4xy\\) and this can be either positive or negative so at (0,0) Hessian is indefinite so (0,0) is saddle point.  
 For \\(x^* = 1/27, y^* = 1/9 \text{ value of }X^TH(1/27,1/9)X = 4x^2-2xy+4y^2/3 = 4(x-y/4)^2+13y^2/4\\) tis value is always >0 for non zero values of x,y. so te Hessian is a positive definite. Therefore, (1/27,1/9) is a minimum stationary point and minimum value is -0.0014.  
+##### Gradient Descent Method:  
+Gradient descent is a first-order iterative optimization algorithm for finding the minimum of a function.The gradient descent method assumes that the function f(x) is differentiable and computes the stationary point as follows
+\\[x_0 = x_0 - \lambda \nabla(f)\\]
+In this method, the location of x is updated in the direction of the steepest descent, which means that x is moved towards the decreasing value of f(x).
+~~~~~~~~
+1. initilize x to \\(x_0\\)
+~~~~~~~~
 ##### Newton's Method:  
 Newton's method is based on quadratic approximation to the function. By using a Taylor series expansion of f around \\(x_0\\) is
 \\[ f(x) \approx f(x_0)+(x-x_0)f'(x_0)+\frac{(x-x_0)^2}{2}f''(x_0)\\]
 \\[ f'(x) = f'(x_0)+(x=x_0)f''(x_0) = 0\\]
-\\[ x = x_0 - \frac{f'(x_0)}{f''(x_0)}
+\\[ x = x_0 - \frac{f'(x_0)}{f''(x_0)}\\]
+above equation can be used to update r until it converges to the location of the minimum value.  
+For multivariate functions the above equaton is \\[x = x_0 - \frac{H^{-1}}{\nabla(f)}\\]
+
 
