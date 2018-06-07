@@ -10,7 +10,9 @@ Optimization is a methodology for finding the maximum or minimum value a real fu
 "best available" values of some objective function given a defined domain (or input), including a variety of different types of objective 
 functions and different types of domains.  
 #### Unconstrained Optimization:  
-In an unconstrained optimization problem, the task is to locate the solution x* that maximizes or minimizes f(x) without imposing anycconstraints on x*. The solution x*, which is known as a stationary point, can be found by taking the first derivative of f(x) and setting it to zero. so for analytical steps are given below:
+In an unconstrained optimization problem, the task is to locate the solution x* that maximizes or minimizes f(x) without imposing anycconstraints on x*. The solution x*, which is known as a stationary point, can be found by taking the first derivative of f(x) and setting it to zero.
+##### analytical method:
+for analytical steps are given below:
 1. Find the f'(x) and set it to zero and then find x = x*  
 2. if f''(x) > 0  then x* is local minimum   
 3. if f''(x) < 0  then x* is local maximum    
@@ -33,6 +35,9 @@ eg: \\[f(x,y) = 3x^2+2y^3-2xy\\]
 \\[\frac{\partial f}{\partial x} = 6x-2y = 0 \text{ and } \frac{\partial f}{\partial y} = 6y^2-2x = 0\\]
 solution for above equation is \\(x^* = y^* = 0 \text{ and } x^* = 1/27, y^* = 1/9\\)  
 Hessain of f is\\[ H(x,y) =   \begin{bmatrix} 6 & -2 \newline -2 & 12y  \end{bmatrix} \\]
-for \\(x^* = y^* = 0 \text{ value of }X^TH(0,0)X = 6x^2-4xy\\) and this can be either positive or negative so at (0,0) Hessian is indefinite so (0,0) is saddle point.  
-for \\(x^* = 1/27, y^* = 1/9 \text{ value of }X^TH(1/27,1/9)X = 4x^2-2xy+4y^2/3\\)
+For \\(x^* = y^* = 0 \text{ value of }X^TH(0,0)X = 6x^2-4xy\\) and this can be either positive or negative so at (0,0) Hessian is indefinite so (0,0) is saddle point.  
+For \\(x^* = 1/27, y^* = 1/9 \text{ value of }X^TH(1/27,1/9)X = 4x^2-2xy+4y^2/3 = 4(x-y/4)^2+13y^2/4\\) tis value is always >0 for non zero values of x,y. so te Hessian is a positive definite. Therefore, (1/27,1/9) is a minimum stationary point and minimum value is -0.0014.  
+##### Newton's Method:  
+Newton's method is based on quadratic approximation to the function. By using a Taylor series expansion of f around \\(x_0\\) is
+\\[ f(x) \approx f(x_0)+(x-x_0)f'(x_0)+\frac{(x-x_0)^2}{2}f"(x_0)\\]
 
