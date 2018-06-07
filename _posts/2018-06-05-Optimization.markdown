@@ -32,5 +32,7 @@ unlike univariate functions, it is more difficult to determine whether X* corres
 eg: \\[f(x,y) = 3x^2+2y^3-2xy\\]
 \\[\frac{\partial f}{\partial x} = 6x-2y = 0 \text{ and } \frac{\partial f}{\partial y} = 6y^2-2x = 0\\]
 solution for above equation is \\(x^* = y^* = 0 \text{ and } x^* = 1/27, y^* = 1/9\\)  
-Hessain of f is\\[ H(x,y) =   \begin{bmatrix} 1 & x \newline 1 & y  \end{bmatrix} \\]
+Hessain of f is\\[ H(x,y) =   \begin{bmatrix} 6 & -2 \newline -2 & 12y  \end{bmatrix} \\]
+for \\(x^* = y^* = 0 \text{ value of }X^TH(0,0)X = 6x^2-4xy\\) and this can be either positive or negative so at (0,0) Hessian is indefinite so (0,0) is saddle point.  
+for \\(x^* = 1/27, y^* = 1/9 \text{ value of }X^TH(1/27,1/9)X = 4x^2-2xy+4/3y^2\\)
 
