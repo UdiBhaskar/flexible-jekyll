@@ -36,5 +36,6 @@ Above is the Gramph for cumulative variance ratio vs no of dimentions. from that
 
 References:
 1. applied ai course
+2. https://en.wikipedia.org/wiki/Principal_component_analysis
 
   
