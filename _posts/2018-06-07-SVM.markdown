@@ -21,3 +21,7 @@ by subtracting
 \\[W.(x_1-x_2) = 2\\]
 \\[||W|| * d = 2\\]
 \\[d = \frac{2}{||W||}\\]
+so our optimization problem is
+\\[ Max \frac{2}{||W||} { Such That } y_i(W^Tx_i+b) \ge 1 { For all i}\\]
+Max x = Min 1/x so we can write our problem as  
+\\[ Min \frac{||W||^2}{2} { Such That } y_i(W^Tx_i+b) \ge 1 { For all i}\\]
