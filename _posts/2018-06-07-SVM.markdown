@@ -12,7 +12,7 @@ Although their training errors are zero there is no guarantee that the hyperplan
 Decision boundaries with large margins tend to have better generalization
 errors than those with small margins.Intuitively, if the margin is small, then any slight perturbations to the decision boundary can have quite a significant impact on its classification Classifiers that produce decision boundaries with small margins are therefore more susceptible to model overfitting and tend to generalize poorly on previously unseen data, so SVM tries to locate the hyperplane such that distance is maximum from both the classes.  
 ##### How SVM is selecting margin: 
-Consider a binary classification problem as shown in below figure and the hyperplane is \\(\pi\\). and two planes whcich are parallel to the hyperplane and passing through nearest point of each class are  \\(\pi_+\\) and  \\(\pi_-\\) as shown in below fig.  
+Consider a binary classification problem as shown in below figure and the hyperplane is \\(\pi\\). and two planes whcich are parallel to the hyperplane and passing through nearest point of each class are  \\(\pi_+\\) and  \\(\pi_-\\) as shown in below fig. and Those points are called as support vectors.  
 ![svm explanation]({{site.baseurl}}/assets/img/max_margin.jpg)  
 Maximizing margin means maximizing distance between the \\(\pi_+\\) and  \\(\pi_-\\).so  our obkective is to maximize the distance between those two planes. Let's assume for all positive points y = +1 and for all negative points y = -1 so \\(y_i(W^Tx+b) \ge 1\\) for all points.To compute the margin, let x1 be a data point located on \\(\pi_+\\) and x2 be a data point on \\(\pi_-\\).
 \\[\pi_+ is W^Tx_1 + b = +1\\]
@@ -60,7 +60,8 @@ Subtituting these values in Lagrangian L
 \\(\sum_{i=1}^n\alpha_iy_ib\\)  will be zero because b is constant and  \\(\sum_{i=1}^n \alpha_iy_i = 0\\).
 \\[ L \;=\; \sum_{i=1}^n\alpha_i -\frac{1}{2}(\sum_{i=1}^n\alpha_iy_ix_i)(\sum_{j=1}^n\alpha_jy_jx_j)\\]
 \\[ L \;=\; \sum_{i=1}^n\alpha_i -\frac{1}{2}(\sum_{i=1}^n\sum_{j=1}^n \alpha_i\alpha_jy_iy_jx_ix_j)\\]
-here conditions are \\(\alpha_i \ge 0\\)  and \\(\sum_{i=1}^n \alpha_iy_i = 0\\).  This is called as Dual formulation of SVM. This has many advantages over primal formulation.
+here conditions are \\(\alpha_i \ge 0\\)  and \\(\sum_{i=1}^n \alpha_iy_i = 0\\).  This is called as Dual formulation of SVM. This has many advantages over primal formulation.  
+After solving above dual formulation we will get \\(\alpha_i\\) > 0  for all support vectors and = 0 for others.For classifying a query point we will use \\(\;W^Tx_q+b)\;\\) sign i.e. \\(\sum_{i=1}^n\alpha_iy_ix_ix_q+b\\). With only support vectors we can classify our query point because for others \\(\alpha_i = 0\\).
 ##### How SVM works for non linear data:
 The trick here is to transform the data from its original coordinate space in x into a new space \\(\phi(x)\\) so that a linear decision
 boundary can be used to separate the instances in the transformed space like below fig.  
@@ -76,7 +77,10 @@ for d = 2
 \\[k(x,y)\; = \; \phi(x_i).\phi(x_j)\\]
 ##### RBF kernal:  
 \\[k(x,y)\; = \; e^{\frac{- ||x_1 - x_2||^2}{2\sigma^2}}\\]
-Here \\(- ||x_1 - x_2||^2\\) may be recognized as the squared Euclidean distance between the two feature vectors. \\(\sigma\\) will give the width if that kernal. intuitively we are getting distance between points in a given range, similar to the KNN. Here \\(\sigma\\) is hyperparameter and free to optimize. \\(\sigma\\) is increasing means we are considering similarity of larger distance points also.so low \\(\sigma\\) may lead to overfit. ( in Scikit learn it was impemented as \\(\gamma = \frac{1}{2\sigma^2}\\)
+Here \\(- ||x_1 - x_2||^2\\) may be recognized as the squared Euclidean distance between the two feature vectors. \\(\sigma\\) will give the width if that kernal. intuitively we are getting distance between points in a given range, similar to the KNN. Here \\(\sigma\\) is hyperparameter and free to optimize. \\(\;\sigma\\) is increasing means we are considering similarity of larger distance points also. so low \\(\;\sigma\;\\) may lead to overfit. intuitively you can think this \\(\;\sigma\;\\) as K in KNN. ( in Scikit learn it was impemented as \\(\gamma = \frac{1}{2\sigma^2}\\).  
+##### Time Complexity:  
+Training time with Libsvm is nearly \\(\;O(n^2)\\)  
+Runtime complexity is \\(\;O(kd)\;\\) here k is no of support vectors, d is dimensions beause \\(\;f(x_q)=\sum_{i=1}^n\alpha_iy_ix_ix_q+b\;\\) and \\(\;\alpha_i = 0\\) for non suport vectors
 
 References:  
 1. Picture of kernal tric taken from http://www.eric-kim.net/eric-kim-net/posts/1/kernel_trick.html
