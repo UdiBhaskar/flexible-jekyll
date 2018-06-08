@@ -31,11 +31,11 @@ So our new formulation is
 \\[( W^* , b^* ) = \text{ arg min }\; \frac{||W||^2}{2}+C(\frac{1}{n}\sum_{i=1}^n\xi_i) \quad { S.T }\quad y_i(W^Tx_i+b) \ge 1-\xi_i \; \forall i \; \text{ and } \; \xi_i > 0\\]
 We can observe that, above formulation can be assumed like \\(C(\frac{1}{n}\sum_{i=1}^n\xi_i)\\) as Loss and \\(\frac{||W||^2}{2}\\) as regularization term. \\(\xi_i\\) is the distance from correct hyperplane so \\(\xi_i\\) = 1 + absolute distance from decision hyperplane \\(\pi\\) for incorrectly classified points and 0  for correctly classified points.
 \\[ \xi_i = 1 \; + abs(W^Tx_i+b)\\]
-\begin{cases}
+\\[ C = \begin{cases}
 a_1x+b_1y+c_1z=d_1 \newline 
 a_2x+b_2y+c_2z=d_2 \newline 
 a_3x+b_3y+c_3z=d_3
-\end{cases}
+\end{cases}\\]
 
 Where C is the hyperparameter, if C increses ten frequency to make mistakes will be decresed,this may led to overfitting to data. If C decreses frequency to make mistakes increases, this may lead to underfit.If C=0, then this is hard margin SVM.  
 
