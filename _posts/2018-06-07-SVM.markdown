@@ -72,10 +72,10 @@ for d = 2
 \\[k(x,y)\; = \; (x.y+1)^2\\]
 \\[k(x,y)\; = \; (1+x_1y_1+x_2y_2)^2\\]
 \\[k(x,y)\; = \; (1+x_1^2y_1^2+x_2^2y_2^2+2x_1y_1+2x_2y_2+2x_1y_1x_2y_2)\\]
-\\[k(x,y)\; = \; (1,x_1^2,x_2^2,\sqrt(2)x_1,\sqrt(2)x_2,\sqrt(2)x_1x_2)^T.(1,y_1^2,y_2^2,\sqrt(2)y_1,\sqrt(2)y_2),\sqrt(2)y_1y_2\\]
+\\[k(x,y)\; = \; (1,x_1^2,x_2^2,\sqrt2x_1,\sqrt2x_2,\sqrt2x_1x_2)^T.(1,y_1^2,y_2^2,\sqrt(2)y_1,\sqrt(2)y_2),\sqrt(2)y_1y_2)\\]
 \\[k(x,y)\; = \; \phi(x_i).\phi(x_j)\\]
 ##### RBF kernal:  
-\\[k(x,y)\; = \; e^{\frac{-||x_1-x_2||^2}{2\sigma^2}}\\]
+\\[k(x,y)\; = \; e^{\frac{- ||x_1 - x_2||^2}{2\sigma^2}}\\]
 
 References:  
 1. Picture of kernal tric taken from http://www.eric-kim.net/eric-kim-net/posts/1/kernel_trick.html
