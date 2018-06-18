@@ -97,5 +97,9 @@ found similar words like below
 For 'Good' got top 10 as ('enjoy', 'enjoying', 'fantastic', 'amazing', 'fabulous', 'nice', 'delicious', 'incredible', 'outstanding', 'perk')  
 For 'sep' - ('dec', 'aug', 'august', 'november', 'sept', 'february', 'expired', 'expiry', 'exp', 'expiration')  
 For 'yum' - ('yummy', 'delish', 'awesome', 'org', 'everybody', 'addictive', 'wow', 'amazing', 'addicted')  
-For 'gin' - ('cocktail', 'cola', 'fizzy', 'clot', 'kinda', 'ting', 'cytoma', 'sour', 'rootbeer', 'soda')  
+For 'gin' - ('cocktail', 'cola', 'fizzy', 'clot', 'kinda', 'ting', 'cytoma', 'sour', 'rootbeer', 'soda') 
+  
+References:
+1. applied ai course - Matrix factorization methods
+
 
