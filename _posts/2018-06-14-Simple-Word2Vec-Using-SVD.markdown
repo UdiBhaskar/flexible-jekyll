@@ -94,4 +94,8 @@ def top_similar_words(v,Wordvectors,n,list_words):
 	return [dict_tfidf[i] for i in ang_n]
 ~~~
 found similar words like below
-For Good got top 10 as ('enjoy', 'enjoying', 'fantastic', 'amazing', 'fabulous', 'nice', 'delicious', 'incredible', 'outstanding', 'perk')
+For 'Good' got top 10 as ('enjoy', 'enjoying', 'fantastic', 'amazing', 'fabulous', 'nice', 'delicious', 'incredible', 'outstanding', 'perk')  
+For 'sep' - ('dec', 'aug', 'august', 'november', 'sept', 'february', 'expired', 'expiry', 'exp', 'expiration')  
+For 'yum' - ('yummy', 'delish', 'awesome', 'org', 'everybody', 'addictive', 'wow', 'amazing', 'addicted')  
+For 'gin' - ('cocktail', 'cola', 'fizzy', 'clot', 'kinda', 'ting', 'cytoma', 'sour', 'rootbeer', 'soda')  
+
