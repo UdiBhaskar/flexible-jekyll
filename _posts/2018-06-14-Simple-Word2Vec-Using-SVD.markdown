@@ -54,7 +54,7 @@ def cooccurrence_matrix(list_words,distance,sentances):
                         com[row,col] = com[row,col] + 1
     return com
 ~~~
-So co-occurrence matrix is (n x n) matrix where n is no of words. it gives how frequent those words exists in a given distance. performed Tuncated SVD on the co-occurrence matrix and selected no of components/dimensions using variance explained and for my data selected as 200 dimensions. Now i have 200 dimension vector for each word.  
+So co-occurrence matrix is (n x n) matrix where n is no of words. it gives how frequent those words exists in a given distance. performed Tuncated SVD on the co-occurrence matrix and selected no of components/dimensions using variance explained and for my data selected as 200 dimensions. Now i have 200 dimension vector for each word.  and converted into dict as below.
 ~~~ python
 #word 2 vectors dict
 W2V_200d = {}
@@ -94,4 +94,4 @@ def top_similar_words(v,Wordvectors,n,list_words):
 	return [dict_tfidf[i] for i in ang_n]
 ~~~
 found similar words like below
-For Good got top 10 as ['enjoy', 'enjoying', 'fantastic', 'amazing', 'fabulous', 'nice', 'delicious', 'incredible', 'outstanding', 'perk']
+For Good got top 10 as ('enjoy', 'enjoying', 'fantastic', 'amazing', 'fabulous', 'nice', 'delicious', 'incredible', 'outstanding', 'perk')
