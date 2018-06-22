@@ -9,11 +9,11 @@ site-twitter: #if your site has a twitter account, enter it here
 # Author Settings
 author: Uday Bhaskar # add your name
 author-img: uday.jpg # add  your photo
-about-author: #I am a web developer focusing on front-end development. Always hungry to keep learning. # add description
+about-author: I am a Machine Learning enthusiast, Having good knowledge on ML Algorithms.I always interested to know,explore and learn new things.
 social-twitter: # add your Twitter handle
 social-facebook: # add your Facebook handle
 social-github: UdiBhaskar # add your Github handle
-social-linkedin: # add your Linkedin handle
+social-linkedin: uday-paila-1a496a84/ # add your Linkedin handle
 social-email: udaybhaskarpaila@gmail.com # add your Email address
 
 # Disqus 
