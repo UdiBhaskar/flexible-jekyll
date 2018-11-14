@@ -50,7 +50,7 @@ i derived some features from questions like no of common words, word share and s
   - <b>word_share</b> = (word_common)/(word_Total)
   - <b>freq_q1+freq_q2</b> = sum total of frequency of qid1 and qid2
   - <b>freq_q1-freq_q2</b> = absolute difference of frequency of qid1 and qid2
-- ##### Advanced Features - Did some preprocessing of texts and extracted some other features. i am giving some definitions which are used below. `Token`- You get a token by splitting sentence by space  ,  `Stop_Word` - stop words as per NLTK, `Word `-A token that is not a stop_word.
+- ##### Advanced Features - Did some preprocessing of texts and extracted some other features. i am giving some definitions which are used below. Token - you get a token by splitting sentence by space  ,  Stop_Word - stop words as per NLTK, Word - A token that is not a stop_word.
   - <b>cwc_min</b> = common_word_count / (min(len(q1_words), len(q2_words)) 
   - <b>cwc_max</b> = common_word_count / (max(len(q1_words), len(q2_words)) 
   - <b>csc_min</b> = common_stop_count / (min(len(q1_stops), len(q2_stops)) 
