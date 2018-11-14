@@ -29,7 +29,7 @@ i derived some features from questions like no of common words, word share and s
 - ##### Distribution of data points among output classes  
 ![No of Datapoints per Class]({{site.baseurl}}/assets/img/output_30_1.png)
 - ##### Number of unique questions
-![Number of unique questions]({{site.baseurl}}/assets/img/output_35_0.png "Number of unique questions") 
+![Number of unique questions]({{site.baseurl}}/assets/img/output_35_0.png) 
 - ##### Number of occurrences of each question
    ![Number of occurrences of each question]({{site.baseurl}}/assets/img/output_39_1.png "Number of occurrences of each question")
 - ##### There is no duplicate pairs. Have 2 Null values, which are filled with space.
