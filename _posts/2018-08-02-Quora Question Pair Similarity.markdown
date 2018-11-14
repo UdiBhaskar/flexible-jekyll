@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Quora Question Pair Similarity
-date: 2018-06-02
-description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
+title: Project - Quora Question Pair Similarity
+date: 2018-08-02
+description: Similarity Of Question Prediction
 img: # i-rest.jpg Add image post (optional)
-tags: # [PCA,Principal component]
+tags: # [Project,Logistic Regression,SVM,XGBoost,NLP,Word2Vec]
 ---
 Over 100 million people visit Quora every month, so it's no surprise that many people ask similarly worded questions. Multiple questions with the same intent can cause seekers to spend more time finding the best answer to their question, and make writers feel they need to answer multiple versions of the same question. Quora values canonical questions because they provide a better experience to active seekers and writers, and offer more value to both of these groups in the long term.  so main aim of project is that predicting whether pair of questions are similar or not. This could be useful to instantly provide answers to questions that have already been answered.
    Credits: Kaggle
@@ -24,7 +24,7 @@ Identify which questions asked on Quora are duplicates of questions that have al
 ### Data Overview:
 Train.csv contains 5 columns : qid1, qid2, question1, question2, is_duplicate. Total we have 404290 entries. Splitted data into train and test with 70% and 30%.
 
-i derived some features from questions like no of common words, word share and some distances between questions with the help of word vectors. will discuss those below. You can check my total work [here](https://github.com/UdiBhaskar/Quora-Question-pair-similarity/blob/master/Quora%20Question%20pair%20similarity.ipynb)
+i derived some features from questions like no of common words, word share and some distances between questions with the help of word vectors. will discuss those below. You can check my total work [here](https://github.com/UdiBhaskar/Quora-Question-pair-similarity/blob/master/Quora%20Question%20pair%20similarity.ipynb) and [Github Link](https://github.com/UdiBhaskar/Quora-Question-pair-similarity)
 ### Some Analysis:
 - ##### Distribution of data points among output classes  
    ![No of Datapoints per Class](https://github.com/UdiBhaskar/Quora-Question-pair-similarity/blob/master/Images/output_30_1.png "No of Datapoints per Class") 
