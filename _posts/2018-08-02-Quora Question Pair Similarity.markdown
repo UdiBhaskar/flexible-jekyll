@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Project - Quora Question Pair Similarity
-otitle: Project - 1111 Quora Question Pair Similarity
 date: 2018-08-02
 description: Similarity Of Question Prediction
 img: # i-rest.jpg Add image post (optional)
