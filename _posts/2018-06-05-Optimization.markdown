@@ -3,7 +3,8 @@ layout: post
 title: Optimization 
 date: 2018-06-05 
 description: # add
-type_post: 0
+type_post: same
+url_post: # add
 img:  # Add image post (optional)
 tags: [Optimization,lagrangian,gradient descent,Newtons method]
 ---
