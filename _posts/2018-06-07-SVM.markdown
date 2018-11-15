@@ -3,6 +3,7 @@ layout: post
 title: Support Vector Machine
 date: 2018-06-07
 description: # add
+type_post: 0
 img:  # Add image post (optional)
 tags: [SVM,Maximum Margin]
 ---
