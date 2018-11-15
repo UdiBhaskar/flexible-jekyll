@@ -3,6 +3,7 @@ layout: post
 title: Project - Quora Question Pair Similarity
 date: 2018-08-02
 description: Similarity Of Question Prediction
+type_post: 0
 img: # i-rest.jpg Add image post (optional)
 tags: # [Project,Logistic Regression,SVM,XGBoost,NLP,Word2Vec]
 ---
