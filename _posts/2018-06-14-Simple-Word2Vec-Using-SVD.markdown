@@ -3,6 +3,7 @@ layout: post
 title: Simple Word2Vec using SVD
 date: 2018-06-14
 description: # add
+type_post: 0
 img:  # Add image post (optional)
 tags: [SVD,Word2Vec]
 ---
