@@ -4,6 +4,7 @@ title: Logistic Regression
 date: 2018-06-04 
 description: # add
 type_post: same
+url_post: # test
 img:  # Add image post (optional)
 tags: [Logistic Regression,LR,Regression]
 ---
