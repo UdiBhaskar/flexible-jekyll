@@ -79,7 +79,8 @@ for d = 2
 Here \\(- ||x_1 - x_2||^2\\) may be recognized as the squared Euclidean distance between the two feature vectors. \\(\;\sigma\;\\) will give the width if that kernal. intuitively we are getting distance between points in a given range, similar to the KNN. Here \\(\;\sigma\;\\) is hyperparameter and free to optimize. \\(\;\sigma\;\\) is increasing means we are considering similarity of larger distance points also. so low \\(\;\sigma\;\\) may lead to overfit. intuitively you can think this \\(\;\sigma\;\\) as K in KNN. ( in Scikit learn it was impemented as \\(\;\gamma = \frac{1}{2\sigma^2}\\).  
 ##### Time Complexity:  
 Training time with Libsvm is nearly \\(\;O(n^2)\\)  
-Runtime complexity is \\(\;O(kd)\;\\) (k is no of support vectors, d is dimensions) because \\(\;f(x_q)=\sum_{i=1}^n\alpha_iy_ix_ix_q+b\;\\) and \\(\;\alpha_i = 0\\) for non support vectors
+Runtime complexity is \\(\;O(kd)\;\\) (k is no of support vectors, d is dimensions) because \\(\;f(x_q)=\sum_{i=1}^n\alpha_iy_ix_ix_q+b\;\\) and \\(\;\alpha_i = 0\\) for non support vectors  
+
 [Here](https://github.com/UdiBhaskar/Data-Science-ML/blob/master/SVM/SVM%20on%20Amazon%20Food%20Reviews.ipynb) you can see total notebook that explains how to do hyperparm tuning to SVM.
 References:  
 1. Picture of kernal tric taken from http://www.eric-kim.net/eric-kim-net/posts/1/kernel_trick.html
