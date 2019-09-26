@@ -36,7 +36,7 @@ We can observe that, above formulation can be assumed like \\(\;C(\frac{1}{n}\su
 \end{cases}\\]
 for incorrectly classified points the absolute distance can be written as \\(-y_i(W^Tx_i+b)\\),  because \\(W^Tx_i+b\\) gives signed distance and and \\(y_i\\) is +1 for positive class and -1 for negative class. For positive class points in negative region \\(W^Tx_i+b\\) is negatative,\\(y_i\\) is positive so  \\(-y_i(W^Tx_i+b)\\) is positive. for negative class points in positive region \\(W^Tx_i+b\\) is positive,\\(y_i\\) is negative so  \\(-y_i(W^Tx_i+b)\\) is positive.
 \\[ \xi_i = \begin{cases}
-1 \; - y_i(W^Tx_i+b)/||W|| \quad \text{ for incorrectly classified points } \newline 
+1 \; - y_i(W^Tx_i+b) \quad \text{ for incorrectly classified points } \newline 
 0 \quad \text{ for correctly classified points } \newline 
 \end{cases}\\]
 
