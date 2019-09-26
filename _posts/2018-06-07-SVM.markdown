@@ -29,25 +29,26 @@ This SVM formulation presented in the previous section constructs only decision 
 the width of the margin and the number of training errors committed by the decision boundary. For this introducing positive-valued slack variables \\(\;\xi\;\\) into the constraints of the optimization such that for all positive points in positive side \\(\;\xi_i = 0\;\\), for all negative points in negative side \\(\;\xi_i = 0\;\\), for all positive points in negative side \\(\;\xi_i > 0\;\\) and \\(\;\xi_i\;\\) is distance from \\(\;\pi_+\;\\), for all negative points in positive side \(\;\xi_i > 0\;\\) and \\(\;\xi_i\;\\) is distance from \\(\;\pi_-\;\\). \\(\;\xi_i\;\\) is high for the points far away from correct hyperplane  \\(\;\pi_+\;\\) or \\(\;\pi_-\\).  
 So our new formulation is 
 \\[( W^* , b^* ) = \text{ arg min }\; \frac{||W||}{2}+C(\frac{1}{n}\sum_{i=1}^n\xi_i) \quad { S.T }\quad y_i(W^Tx_i+b) \ge 1-\xi_i \; \forall i \; \text{ and } \; \xi_i > 0\\]
-We can observe that, above formulation can be assumed like \\(\;C(\frac{1}{n}\sum_{i=1}^n\xi_i)\;\\) as Loss and \\(\;\frac{||W||}{2}\;\\) as regularization term. \\(\;\xi_i\;\\) is the distance from correct hyperplane so \\(\xi_i\\) = 1 + absolute distance from decision hyperplane \\(\pi\\) for incorrectly classified points and 0  for correctly classified points.
+We can observe that, above formulation can be assumed like \\(\;C(\frac{1}{n}\sum_{i=1}^n\xi_i)\;\\) as Loss and \\(\;\frac{||W||}{2}\;\\) as regularization term. \\(\;\xi_i\;\\) is the distance from correct hyperplane so \\(\xi_i\\) = 1 + absolute distance from decision hyperplane \\(\pi\\) for incorrectly classified points and 0  for correctly classified points. but As it turns out, distance alone is not as useful as distance inversely weighted by the margin size becuase distance is given by W^Tx_i+b/||W||. This can be explained by thinking of a specific example. Suppose a point is inside the margin by one unit. and it is worse when the margin is 2 units across than 200 units(margin width). When the margin is this small, penetrating it by even a small distance means the point is very close to being incorrectly classified. to remove this effect, we will remove ||W|| in denominator.
 \\[ \xi_i = \begin{cases}
-1 \; + abs(W^Tx_i+b/||W||) \quad \text{ for incorrectly classified points } \newline 
+1 \; + abs(W^Tx_i+b) \quad \text{ for incorrectly classified points } \newline 
 0 \quad \text{ for correctly classified points } \newline 
 \end{cases}\\]
-for incorrectly classified points the absolute distance can be written as \\(-y_i(W^Tx_i+b)/||W||\\),  because \\(W^Tx_i+b/||W||\\) gives signed distance and and \\(y_i\\) is +1 for positive class and -1 for negative class. For positive class points in negative region \\(W^Tx_i+b/||W||\\) is negatative,\\(y_i\\) is positive so  \\(-y_i(W^Tx_i+b)/||W||\\) is positive. for negative class points in positive region \\(W^Tx_i+b/||W||\\) is positive,\\(y_i\\) is negative so  \\(-y_i(W^Tx_i+b)/||W||\\) is positive.
+for incorrectly classified points the absolute distance can be written as \\(-y_i(W^Tx_i+b)\\),  because \\(W^Tx_i+b\\) gives signed distance and and \\(y_i\\) is +1 for positive class and -1 for negative class. For positive class points in negative region \\(W^Tx_i+b\\) is negatative,\\(y_i\\) is positive so  \\(-y_i(W^Tx_i+b)\\) is positive. for negative class points in positive region \\(W^Tx_i+b\\) is positive,\\(y_i\\) is negative so  \\(-y_i(W^Tx_i+b)\\) is positive.
 \\[ \xi_i = \begin{cases}
-1 \; - y_i(W^Tx_i+b) \quad \text{ for incorrectly classified points } \newline 
+1 \; - y_i(W^Tx_i+b)/||W|| \quad \text{ for incorrectly classified points } \newline 
 0 \quad \text{ for correctly classified points } \newline 
 \end{cases}\\]
+
 also for correctly classified points \\(-y_i(W^Tx_i+b)\\) is negative so we can write as
 \\[ \xi_i =  MAX(0\;,1 \; - y_i(W^Tx_i+b))\\]
 final optimization problem is 
-\\[ Min \; C(\sum_{i=1}^n \; MAX(0\;,1 \; - y_i(W^Tx_i+b))) \; + \; \frac{||W||^2}{2}\\]
+\\[ Min \; C(\sum_{i=1}^n \; MAX(0\;,1 \; - y_i(W^Tx_i+b))) \; + \; \frac{||W||}{2}\\]
 This is nothing but a [Hing Loss](https://en.wikipedia.org/wiki/Hinge_loss).
 Where C is the hyperparameter, if C increses ten frequency to make mistakes will be decresed,this may led to overfitting to data. If C decreses frequency to make mistakes increases, this may lead to underfit.If C=0, then this is hard margin SVM.  
 ##### Solution for Optimization:  
-our optimization problem is to minimize \\(\frac{||W||^2}{2}\\) such that \\(y_i(W^Tx_i+b) \ge 1 \; \forall i = 1,2..n\\). so Lagrangian is (for optimization tutorial you can see [here](https://udibhaskar.github.io/ml_blog/Optimization/))
-\\[ L \;= \frac{||W||^2}{2} \; - \; \sum_{i=1}^n \alpha_i(y_i(W^Tx_i+b)-1)\\]
+our optimization problem is to minimize \\(\frac{||W||}{2}\\) such that \\(y_i(W^Tx_i+b) \ge 1 \; \forall i = 1,2..n\\). so Lagrangian is (for optimization tutorial you can see [here](https://udibhaskar.github.io/ml_blog/Optimization/))
+\\[ L \;= \frac{||W||}{2} \; - \; \sum_{i=1}^n \alpha_i(y_i(W^Tx_i+b)-1)\\]
 KKT conditions are
 \\[ \frac{\partial L}{\partial W} \; = \; W - \sum_{i=1}^n \alpha_iy_ix_i = 0\\]
 \\[\frac{\partial L}{\partial b} \; = \; -\sum_{i=1}^n\alpha_iy_i = 0\\]
