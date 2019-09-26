@@ -4,7 +4,7 @@ title: Support Vector Machine
 date: 2018-06-07
 description: # add
 type_post: same
-url_post: # add
+url_post: # add  
 img:  # Add image post (optional)
 tags: [SVM,Maximum Margin]
 ---
