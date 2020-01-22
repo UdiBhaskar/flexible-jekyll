@@ -28,7 +28,7 @@ Train.csv contains 5 columns : qid1, qid2, question1, question2, is_duplicate. T
 
 i derived some features from questions like no of common words, word share and some distances between questions with the help of word vectors. will discuss those below. You can check my total work [here](https://github.com/UdiBhaskar/Quora-Question-pair-similarity/blob/master/Quora%20Question%20pair%20similarity.ipynb) and [Github Link](https://github.com/UdiBhaskar/Quora-Question-pair-similarity) 
 ### Some Analysis:
-- ##### Distribution of data points among output classes  
+- ##### Distribution of data points among output classes   
 ![No of Datapoints per Class]({{site.baseurl}}/assets/img/output_30_1.png)
 - ##### Number of unique questions
 ![Number of unique questions]({{site.baseurl}}/assets/img/output_35_0.png) 
