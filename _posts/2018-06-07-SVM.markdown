@@ -87,5 +87,4 @@ Runtime complexity is \\(\;O(kd)\;\\) (k is no of support vectors, d is dimensio
 References:  
 1. Picture of kernal tric taken from http://www.eric-kim.net/eric-kim-net/posts/1/kernel_trick.html
 2. Some Pictures taken from wikipedia
-3. Applied AI Course
-4. MIT 6.034 Artificial Intelligence - SVM Lecture
+3. MIT 6.034 Artificial Intelligence - SVM Lecture
