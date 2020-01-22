@@ -104,7 +104,6 @@ i derived some features from questions like no of common words, word share and s
 ##### References:
 1. https://www.kaggle.com/c/quora-question-pairs 
 2. https://www.kaggle.com/c/quora-question-pairs/discussion
-3. Applied AI Course
-4. https://github.com/seatgeek/fuzzywuzzy#usage , https://chairnerd.seatgeek.com/fuzzywuzzy-fuzzy-string-matching-in-python/
-5. http://proceedings.mlr.press/v37/kusnerb15.pdf
+3. https://github.com/seatgeek/fuzzywuzzy#usage , https://chairnerd.seatgeek.com/fuzzywuzzy-fuzzy-string-matching-in-python/
+4. http://proceedings.mlr.press/v37/kusnerb15.pdf
 
